@@ -9,6 +9,9 @@
     "url": "https://github.com/amarshall/fontdetect.git"
   },
   "main": "fontDetect",
+  "scripts": {
+    "test": "./node_modules/.bin/karma start spec/karma.conf.js --single-run --browsers Firefox"
+  },
   "dependencies": {},
   "devDependencies": {
     "chai": "~1.7.2",
