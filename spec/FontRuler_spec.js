@@ -3,7 +3,7 @@ define(['chai', 'FontRuler'], function(chai, FontRuler) {
   var expect = chai.expect
 
   describe("FontRuler", function() {
-    it("gives the 'width' of a font", function() {
+    it("gives different widths for different fonts", function() {
       var ruler = new FontRuler()
       var width1 = ruler.width('serif')
       var width2 = ruler.width('sans-serif')
@@ -11,7 +11,7 @@ define(['chai', 'FontRuler'], function(chai, FontRuler) {
       expect(width1).to.not.eq(width2)
     })
 
-    it("gives different widths for different fonts", function() {
+    it("gives the same width for the same font", function() {
       var ruler = new FontRuler()
       var width1 = ruler.width('serif')
       var width2 = ruler.width('serif')
