@@ -16,7 +16,10 @@ define(['chai', 'fontDetect'], function(chai, fontDetect) {
     })
 
     it("calls a callback async when it has been loaded if one is given", function(done) {
-      fontDetect('Verdana', function() { done() })
+      fontDetect('Verdana', function(fontName) {
+        expect(fontName).to.eq('Verdana')
+        done()
+      })
     })
   })
 })
